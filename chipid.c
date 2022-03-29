@@ -50,6 +50,7 @@ static const struct _chip _chips_samx7[] = {
 	{ "SAMV70N19", 0xa13d0a00, 0x00000001, 0x400e0c00, 0x00400000,  512, 9 },
 	{ "SAMV70J20", 0xa1320c00, 0x00000000, 0x400e0c00, 0x00400000, 1024, 9 },
 	{ "SAMV70J19", 0xa13d0a00, 0x00000000, 0x400e0c00, 0x00400000,  512, 9 },
+    { "SAMS70Q21B", 0xa1120e01, 0x00000002, 0x400e0c00, 0x00400000, 2048, 9 },
 };
 
 static const struct _chip_serie _chip_series[] = {

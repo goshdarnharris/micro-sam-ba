@@ -27,7 +27,6 @@ static bool configure_tty(int fd, int speed)
 	struct termios tty;
 
 	memset(&tty, 0, sizeof(tty));
-
 	if (tcgetattr(fd, &tty) != 0) {
 		perror("error from tcgetattr: ");
 		return false;
@@ -70,7 +69,8 @@ int samba_open(const char* device)
 		return -1;
 	}
 
-	if (!configure_tty(fd, B4000000)) {
+	// if (!configure_tty(fd, B4000000)) {
+    if (!configure_tty(fd, B115200)) {
 		close(fd);
 		return -1;
 	}
@@ -79,7 +79,6 @@ int samba_open(const char* device)
 		close(fd);
 		return -1;
 	}
-
 	return fd;
 }
 
